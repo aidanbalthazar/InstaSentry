@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="extension/512x512.png" alt="InstaSentry Logo" width="140"/>
+  <img src="extension/icons/512x512.png" alt="InstaSentry Logo" width="140"/>
 </p>
 
 <h1 align="center">InstaSentry</h1>
