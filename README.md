@@ -75,7 +75,7 @@ For now, users should download InstaSentry **only** from the official GitHub Rel
 
 InstaSentry is an academic and analytical tool designed to identify behavioral patterns in publicly available Instagram data. The results produced by this tool are probabilistic and should not be interpreted as definitive classifications.
 
-- InstaSentry does **not** determine whether an account is a bot or a real individual.
+- InstaSentry does **not make definitive classifications** of accounts as automated or human; it provides a probabilistic assessment based on observed behavioral patterns.
 - InstaSentry does **not** identify the person or entity behind any account.
 - InstaSentry does **not** determine the truth, accuracy, or intent of any content.
 - InstaSentry does **not** promote or support any political viewpoint or ideology.
