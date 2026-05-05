@@ -5,7 +5,7 @@
 <h1 align="center">InstaSentry</h1>
 
 <p align="center">
-Behavioral analysis tool for detecting patterns of automated and coordinated account activity on Instagram
+  <i>Behavioral analysis tool for detecting patterns of automated and coordinated account activity on Instagram</i>
 </p>
 
 ## Purpose
@@ -60,3 +60,13 @@ To run InstaSentry, ensure the following are installed and available:
 - **Google Chrome Browser** (latest version recommended)  
 - **Internet Connection** 
 - **Instagram Account** (login required; a secondary or non-personal account is recommended)
+
+## Installation
+
+**Installation instructions for InstaSentry are currently being finalized.**
+
+Because InstaSentry is distributed as a local Windows executable, some systems may require the user to manually allow the application through Windows security prompts before running it. The recommended process is to allow only the InstaSentry application when prompted, while keeping Windows security features enabled.
+
+A step-by-step installation guide and video walkthrough will be added in a future update.
+
+For now, users should download InstaSentry **only** from the official GitHub Releases page for this repository.
