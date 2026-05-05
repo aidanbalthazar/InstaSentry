@@ -25,3 +25,29 @@ These comments can rapidly accumulate tens of thousands of likes, reaching large
 InstaSentry was developed to support the analysis of these patterns by identifying behavioral indicators commonly associated with automated or coordinated account activity. The goal is not to determine truth, assign intent, or promote any political perspective, but rather to provide a structured way to question and evaluate the sources and behaviors behind highly visible content.
 
 By encouraging deeper inspection of account activity and engagement patterns, this tool aims to support awareness, critical thinking, and informed analysis of online information environments.
+
+## Features (v1.0.0)
+
+- **Chrome Side Panel Interface**  
+  Lightweight user interface integrated directly into the browser for streamlined interaction.
+
+- **Full Analysis Mode**  
+  Analyze a public Instagram post by collecting comments and evaluating associated account activity.
+
+- **Profile-Only Analysis Mode**  
+  Perform focused analysis on a single Instagram account without comment collection.
+
+- **Keyword-Based Comment Filtering**  
+  Filter collected comments using user-defined keywords to identify relevant or targeted content.
+
+- **Behavioral Scoring System**  
+  Assign a structured score based on detected behavioral indicators, where higher scores indicate more likely human activity.
+
+- **Explainable "Why Report"**  
+  Generate a detailed report outlining which indicators contributed to the final score.
+
+- **Public Data Collection via Automation**  
+  Uses automated browsing to collect publicly available account and comment data for analysis.
+
+- **Downloadable Output Files**  
+  Export results including all comments, filtered comments, profile data, and analysis reports.
