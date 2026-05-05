@@ -83,3 +83,9 @@ InstaSentry is an academic and analytical tool designed to identify behavioral p
 All analysis is based solely on observable patterns and configurable indicators within publicly accessible data. Results are intended to support research, education, and critical evaluation—not to make accusations or conclusions about specific users.
 
 Users are responsible for how they interpret and use the output of this tool.
+
+## License
+
+This project is proprietary and is provided for educational and demonstration purposes only.
+
+All rights reserved. No part of this software may be copied, modified, distributed, or used without explicit permission from the author.
