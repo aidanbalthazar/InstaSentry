@@ -70,3 +70,16 @@ Because InstaSentry is distributed as a local Windows executable, some systems m
 A step-by-step installation guide and video walkthrough will be added in a future update.
 
 For now, users should download InstaSentry **only** from the official GitHub Releases page for this repository.
+
+## Disclaimers
+
+InstaSentry is an academic and analytical tool designed to identify behavioral patterns in publicly available Instagram data. The results produced by this tool are probabilistic and should not be interpreted as definitive classifications.
+
+- InstaSentry does **not** determine whether an account is a bot or a real individual.
+- InstaSentry does **not** identify the person or entity behind any account.
+- InstaSentry does **not** determine the truth, accuracy, or intent of any content.
+- InstaSentry does **not** promote or support any political viewpoint or ideology.
+
+All analysis is based solely on observable patterns and configurable indicators within publicly accessible data. Results are intended to support research, education, and critical evaluation—not to make accusations or conclusions about specific users.
+
+Users are responsible for how they interpret and use the output of this tool.
