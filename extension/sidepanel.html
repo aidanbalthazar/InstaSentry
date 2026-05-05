@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InstaSentry</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <main class="panel-shell">
+    <section class="card page active" id="pageModeSelect">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Select how you want to begin.</p>
+      
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <div class="mode-group" role="radiogroup" aria-label="Analysis mode">
+        <button class="mode-option active" type="button" data-mode="full" aria-pressed="true">
+          <span class="mode-ring"></span>
+          <span class="mode-copy">
+            <span class="mode-title">Full Analysis</span>
+            <span class="mode-text">Analyze a post, filter comments by keywords, and score selected profiles.</span>
+          </span>
+        </button>
+
+        <button class="mode-option" type="button" data-mode="profile" aria-pressed="false">
+          <span class="mode-ring"></span>
+          <span class="mode-copy">
+            <span class="mode-title">Profile Only</span>
+            <span class="mode-text">Analyze a single profile and return a final score.</span>
+          </span>
+        </button>
+      </div>
+
+      <button id="continueBtn" class="continue-btn" type="button">Continue</button>
+      <p id="statusText" class="status-text"></p>
+      <div class="developer-credit">
+        <div class="update-note">Check for updates:</div>
+        <a href="https://github.com/aidanbalthazar" target="_blank" rel="noopener noreferrer">
+          GitHub • Aidan Balthazar
+        </a>
+      </div>
+    </section>
+
+    <section class="card page" id="pageFullAnalysis">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Enter the post details to begin full analysis.</p>
+
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <form id="fullAnalysisForm" class="form-stack">
+        <label class="field-block" for="postUrl">
+          <span class="field-label">Instagram Post URL</span>
+          <input id="postUrl" class="text-input" type="text" placeholder="Paste Instagram post link" />
+        </label>
+
+        <label class="field-block" for="commentCount">
+          <span class="field-label">
+            Comments to Collect <span class="asterisk">*</span>
+          </span>
+          <input id="commentCount" class="text-input" type="text" placeholder="Enter a number (max 1000)" />
+        </label>
+
+        <p class="field-note">
+          * Higher comment counts may significantly increase processing time.
+        </p>
+
+        <label class="field-block" for="keywords">
+          <span class="field-label">Keywords</span>
+          <input id="keywords" class="text-input" type="text" placeholder="Enter keywords separated by commas" />
+        </label>
+
+        <div class="button-stack">
+          <button id="fullContinueBtn" class="continue-btn form-continue" type="submit">Continue</button>
+        </div>
+      </form>
+
+      <p id="formStatusText" class="status-text"></p>
+    </section>
+
+    <section class="card page" id="pageProcessing">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Processing your full analysis request.</p>
+
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <div class="status-console" aria-live="polite">
+        <div class="status-row done"><span class="status-icon">❕</span><span class="status-line">Waiting for login</span></div>
+        <div class="status-row working"><span class="status-icon">⏳</span><span class="status-line">Collecting comments...</span></div>
+        <div class="status-row working"><span class="status-icon">⏳</span><span class="status-line">Filtering keywords...</span></div>
+        <div class="status-row working"><span class="status-icon">⏳</span><span class="status-line">Preparing files...</span></div>
+      </div>
+
+      <p class="status-note">
+        Please wait while InstaSentry completes this step.
+      </p>
+
+      <div class="button-stack">
+        <button id="processingContinueBtn" class="continue-btn disabled-btn" disabled>Continue</button>      
+      </div>
+
+      <p class="login-note">
+        <span class="login-icon">⚠️</span>
+        Instagram login opened in another window. Check your taskbar.
+      </p>
+
+    </section>
+
+    <section class="card page" id="pageDownloads">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Download the comment files, review them, then continue to search a username.</p>
+
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <div class="download-group">
+        <button id="downloadAllBtn" class="download-btn" type="button">Download All Comments</button>
+        <button id="downloadFilteredBtn" class="download-btn" type="button">Download Filtered Comments</button>
+      </div>
+
+      <div class="button-stack">
+        <button id="downloadsContinueBtn" class="continue-btn">Continue</button>
+      </div>
+
+      <p id="downloadsStatusText" class="status-text"></p>
+    </section>
+
+    <section class="card page" id="pageProfileLogin">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Log in to Instagram to continue with profile analysis.</p>
+
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <div class="status-console" aria-live="polite">
+        <div class="status-row done"><span class="status-icon">❕</span><span class="status-line">Instagram login required before searching a profile.</span></div>
+        <div class="status-row working"><span class="status-icon">⏳</span><span class="status-line">Waiting for login...</span></div>
+      </div>
+
+      <p class="status-note">Once login is complete, continue to the username search step.</p>
+
+      <div class="button-stack">
+        <button id="profileLoginContinueBtn" class="continue-btn">Continue</button>
+      </div>
+
+      <p class="login-note">
+        <span class="login-icon">⚠️</span>
+        Instagram login opened in another window. Check your taskbar.
+      </p>
+
+    </section>
+
+    <section class="card page" id="pageProfileSearch">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Enter the profile details to begin analysis.</p>
+
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <form id="profileSearchForm" class="form-stack">
+        <label class="field-block" for="profileUsername">
+          <span class="field-label">Instagram Username</span>
+          <input id="profileUsername" class="text-input" type="text" placeholder="Enter profile username" />
+        </label>
+
+        <div class="button-stack">
+          <button id="profileSearchContinueBtn" class="continue-btn form-continue" type="submit">Continue</button>
+        </div>
+      </form>
+
+      <p id="profileSearchStatusText" class="status-text"></p>
+    </section>
+
+    <section class="card page" id="pageProfileProcessing">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Processing your profile analysis request.</p>
+
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <div class="status-console" aria-live="polite">
+        <div class="status-row done"><span class="status-icon">❕</span><span class="status-line">Searching profile...</span></div>
+        <div class="status-row working"><span class="status-icon">⏳</span><span class="status-line">Collecting public profile data...</span></div>
+        <div class="status-row working"><span class="status-icon">⏳</span><span class="status-line">Scoring account indicators...</span></div>
+        <div class="status-row working"><span class="status-icon">⏳</span><span class="status-line">Preparing result files...</span></div>
+      </div>
+
+      <p class="status-note">Please wait while InstaSentry completes this step.</p>
+
+      <div class="button-stack">
+        <button id="profileProcessingContinueBtn" class="continue-btn disabled-btn" disabled>Continue</button>
+      </div>
+    </section>
+
+    <section class="card page" id="pageResults">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Analysis complete.</p>
+      
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <div class="results-score-wrap">
+        <div class="gauge-wrap" aria-hidden="true">
+          <svg class="score-gauge" viewBox="0 0 220 130">
+            <defs>
+              <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#F79E59"></stop>
+                <stop offset="50%" stop-color="#ED1653"></stop>
+                <stop offset="100%" stop-color="#88119D"></stop>
+              </linearGradient>
+            </defs>
+            <path id="gaugeTrack" class="gauge-track" d=""></path>
+            <path id="gaugeFill" class="gauge-fill" d=""></path>
+          </svg>
+        </div>
+
+        <div id="finalScore" class="final-score">78</div>
+        <div id="resultUsername" class="result-username">@username</div>
+        <div id="scoreLabel" class="score-label">Likely human</div>
+      </div>
+
+      <div id="fullResultsButtons" class="download-group">
+        <button id="resultsDownloadAllBtn" class="download-btn" type="button">Download All Comments</button>
+        <button id="resultsDownloadFilteredBtn" class="download-btn" type="button">Download Filtered Comments</button>
+        <button id="resultsDownloadProfileBtn" class="download-btn" type="button">Download Public Profile Data</button>
+        <button id="resultsDownloadWhyBtn" class="download-btn" type="button">Download Why Report</button>
+        <button id="restartBtnFull" class="continue-btn restart-btn" type="button">Restart</button>
+        <button id="exitBtnFull" class="exit-btn" type="button">Exit</button>
+      </div>
+
+      <div id="profileResultsButtons" class="download-group hidden">
+        <button id="resultsProfileOnlyDataBtn" class="download-btn" type="button">Download Public Profile Data</button>
+        <button id="resultsProfileOnlyWhyBtn" class="download-btn" type="button">Download Why Report</button>
+        <button id="restartBtnProfile" class="continue-btn restart-btn" type="button">Restart</button>
+        <button id="exitBtnProfile" class="exit-btn" type="button">Exit</button>
+      </div>
+
+      <p id="resultsStatusText" class="status-text"></p>
+
+    </section>
+    <section class="card page" id="pageTerminated">
+      <div class="title-row">
+        <h1 class="title">InstaSentry</h1>
+        <span class="version-badge">v0.9.0</span>
+      </div>
+      <p class="subtitle">Session terminated.</p>
+
+      <div class="server-status global-server-status">
+        <span class="status-dot server-status-dot offline"></span>
+        <span class="server-status-text">Checking server...</span>
+        <button class="server-kill-btn disabled-btn" type="button" disabled>Kill</button>
+      </div>
+
+      <div class="terminated-wrap">
+        <div class="terminated-title">Session terminated.</div>
+        <div class="terminated-text">
+          The browser session and backend have been closed. You may now leave this panel.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

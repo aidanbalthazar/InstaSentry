@@ -1,0 +1,764 @@
+{
+    "max_risk_score": 160,
+
+    "flagged_link_terms": [
+        "onlyfans",
+        "fansly",
+        "ai",
+        "bit.ly",
+        "tinyurl",
+        "getmysocial",
+        "snapme",
+        "myotherprofile",
+        "moreofmylinks",
+        "exploremysocials",
+        "addmysnap",
+        "mylinks",
+        "socials",
+        "mypage",
+        "mybackup",
+        "newaccount",
+        "secondaccount",
+        "snap",
+        "vip",
+        "cam",
+        "fans",
+        "link",
+        "bio"
+    ],
+    "flagged_bio_terms": [
+        "add my snap",
+        "snapchat",
+        "new ig",
+        "new page",
+        "backup ig",
+        "backup",
+        "second",
+        "main account",
+        "main",
+        "share w mutuals",
+        "follow me",
+        "spy",
+        "fun"
+    ],
+    "vague_bio_terms": [
+        "social",
+        "socials",
+        "share",
+        "new",
+        "fresh",
+        "account",
+        "link"
+    ],
+    "bio_rules": {
+    "vague_length_max": 10,
+    "emoji_heavy_min": 4
+    },
+    "country_terms": [
+        "united states",
+        "usa",
+        "america",
+        "russia",
+        "china",
+        "iran",
+        "north korea",
+        "ukraine",
+        "israel",
+        "palestine",
+        "syria",
+        "venezuela",
+        "afghanistan",
+        "iraq",
+        "yemen",
+        "lebanon",
+        "pakistan",
+        "qatar",
+        "uae",
+        "saudi arabia",
+        "turkey",
+        "egypt",
+        "taiwan",
+        "south korea",
+        "uk",
+        "germany",
+        "france"
+    ],
+    "high_risk_countries": [
+        "russia",
+        "china",
+        "iran",
+        "north korea",
+        "qatar",
+        "venezuela",
+        "ukraine",
+        "israel",
+        "palestine",
+        "syria",
+        "afghanistan",
+        "iraq",
+        "yemen",
+        "lebanon",
+        "pakistan",
+        "saudi arabia",
+        "turkey",
+        "egypt",
+        "taiwan",
+        "india"
+    ],
+    "propaganda_phrases": [
+        "united states of israel",
+        "good goy",
+        "ai slop",
+        "ai",
+        "predator",
+        "pedophile",
+        "p3do",
+        "rapist",
+        "facist",
+        "terrorist",
+        "synagogue of satan",
+        "goyim",
+        "baal",
+        "death to israel",
+        "hitler",
+        "jewsmax",
+        "impeach",
+        "felon"
+    ],
+    "emotional_words": [
+        "urgent",
+        "now",
+        "threat",
+        "crisis",
+        "corrupt",
+        "evil",
+        "liar",
+        "lying",
+        "wake up",
+        "fight",
+        "revolution"
+    ],
+    "scoring_thresholds": {
+        "account_age_months": [
+            {
+                "max": 11,
+                "score": 12
+            },
+            {
+                "max": 35,
+                "score": 8
+            },
+            {
+                "max": 59,
+                "score": 4
+            },
+            {
+                "max": 83,
+                "score": 2
+            },
+            {
+                "max": null,
+                "score": 0
+            }
+        ],
+        "username_changes": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": 2,
+                "score": 4
+            },
+            {
+                "max": 5,
+                "score": 8
+            },
+            {
+                "max": null,
+                "score": 12
+            }
+        ],
+        "username_changed_rate": [
+            {
+                "max": 1,
+                "score": 0
+            },
+            {
+                "max": 2,
+                "score": 4
+            },
+            {
+                "max": 4,
+                "score": 8
+            },
+            {
+                "max": null,
+                "score": 12
+            }
+        ],
+        "post_count": [
+            {
+                "max": 0,
+                "score": 12
+            },
+            {
+                "max": 4,
+                "score": 8
+            },
+            {
+                "max": 9,
+                "score": 4
+            },
+            {
+                "max": null,
+                "score": 0
+            }
+        ],
+        "follower_count": [
+            {
+                "max": 0,
+                "score": 12
+            },
+            {
+                "max": 5,
+                "score": 10
+            },
+            {
+                "max": 20,
+                "score": 8
+            },
+            {
+                "max": 50,
+                "score": 6
+            },
+            {
+                "max": 100,
+                "score": 4
+            },
+            {
+                "max": null,
+                "score": 0
+            }
+        ],
+        "following_count": [
+            {
+                "max": 100,
+                "score": 0
+            },
+            {
+                "max": 300,
+                "score": 2
+            },
+            {
+                "max": 500,
+                "score": 4
+            },
+            {
+                "max": 1000,
+                "score": 6
+            },
+            {
+                "max": 2000,
+                "score": 8
+            },
+            {
+                "max": null,
+                "score": 10
+            }
+        ],
+        "following_follower_ratio": [
+            {
+                "max": 1,
+                "score": 0
+            },
+            {
+                "max": 3,
+                "score": 3
+            },
+            {
+                "max": 10,
+                "score": 5
+            },
+            {
+                "max": 20,
+                "score": 6
+            },
+            {
+                "max": 50,
+                "score": 8
+            },
+            {
+                "max": null,
+                "score": 12
+            }
+        ],
+        "links_in_bio_match_count": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": 1,
+                "score": 4
+            },
+            {
+                "max": 2,
+                "score": 8
+            },
+            {
+                "max": null,
+                "score": 12
+            }
+        ],
+        "hashtags": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": 2,
+                "score": 1
+            },
+            {
+                "max": 5,
+                "score": 2
+            },
+            {
+                "max": null,
+                "score": 3
+            }
+        ],
+        "emoji_usage": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": 3,
+                "score": 1
+            },
+            {
+                "max": 7,
+                "score": 2
+            },
+            {
+                "max": null,
+                "score": 3
+            }
+        ],
+        "propaganda_phrases": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": 1,
+                "score": 2
+            },
+            {
+                "max": 3,
+                "score": 4
+            },
+            {
+                "max": null,
+                "score": 6
+            }
+        ],
+        "emotional_language": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": 1,
+                "score": 2
+            },
+            {
+                "max": 3,
+                "score": 4
+            },
+            {
+                "max": null,
+                "score": 6
+            }
+        ],
+        "country_mentions": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": 1,
+                "score": 1
+            },
+            {
+                "max": 3,
+                "score": 2
+            },
+            {
+                "max": null,
+                "score": 3
+            }
+        ],
+        "comment_length_average": [
+            {
+                "max": 9.99,
+                "score": 1
+            },
+            {
+                "max": null,
+                "score": 0
+            }
+        ],
+        "punctuation_patterns": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": null,
+                "score": 1
+            }
+        ],
+        "capitalization_patterns": [
+            {
+                "max": 0,
+                "score": 0
+            },
+            {
+                "max": null,
+                "score": 1
+            }
+        ]
+    },
+    "score_maps": {
+        "private_status": {
+            "true": 0,
+            "false": 1
+        },
+        "username_structure": {
+            "normal": 0,
+            "generic_handle": 1,
+            "minor_numbers_symbols": 1,
+            "random_pattern": 2,
+            "highly_random": 3
+        },
+        "name_username_mismatch": {
+            "consistent": 0,
+            "no_display_name": 0,
+            "minor_variation": 2,
+            "noticeable_mismatch": 4,
+            "completely_inconsistent": 6
+        },
+        "bio_content": {
+            "normal": 0,
+            "vague_minimal": 3,
+            "generic_or_emoji_heavy": 5,
+            "no_bio": 8,
+            "propaganda_or_coordinated": 10
+        },
+        "display_name_presence": {
+            "true": 0,
+            "false": 4
+        },
+        "repetitive_comment_pattern": {
+            "none": 0,
+            "mild": 2,
+            "heavy": 4,
+            "extreme": 6
+        },
+        "profile_picture_presence": {
+            "true": 0,
+            "false": 2
+        },
+        "account_location": {
+            "normal": 0,
+            "unknown": 2,
+            "high_risk": 6
+        }
+    },
+    "combo_rules": [
+        {
+            "name": "low_posts_low_followers_high_following",
+            "conditions": {
+            "posts_max": 1,
+            "followers_max": 50,
+            "following_min": 200
+            },
+            "score": 12,
+            "reason": "Low posts, low followers, and high following were detected together."
+        },
+        {
+            "name": "link_and_spam_bio",
+            "conditions": {
+            "link_flag_min": 1,
+            "bio_types": ["propaganda_or_coordinated", "vague_minimal"]
+            },
+            "score": 10,
+            "reason": "A flagged link and suspicious bio language were detected together."
+        },
+        {
+            "name": "bad_ratio_low_followers",
+            "conditions": {
+            "ratio_max": 0.2,
+            "followers_max": 100
+            },
+            "score": 10,
+            "reason": "A very poor follower/following ratio was detected alongside low followers."
+        },
+        {
+            "name": "dead_account",
+            "conditions": {
+            "posts_max": 0,
+            "followers_max": 0
+            },
+            "score": 12,
+            "reason": "The account has no posts and no followers."
+        },
+        {
+            "name": "young_account_username_changes",
+            "conditions": {
+            "account_age_max": 18,
+            "username_changes_min": 3
+            },
+            "score": 8,
+            "reason": "A relatively new account has multiple username changes."
+        },
+        {
+            "name": "link_and_bad_ratio",
+            "conditions": {
+            "link_flag_min": 1,
+            "ratio_max": 0.3
+            },
+            "score": 8,
+            "reason": "A flagged link was detected together with a poor follower/following ratio."
+        },
+        {
+            "name": "high_following_low_followers",
+            "conditions": {
+            "following_min": 500,
+            "followers_max": 100
+            },
+            "score": 8,
+            "reason": "The account follows many users while having very few followers."
+        },
+        {
+            "name": "emoji_heavy_bio",
+            "conditions": {
+            "bio_type": "generic_or_emoji_heavy",
+            "emoji_min": 4
+            },
+            "score": 6,
+            "reason": "The bio appears emoji-heavy and low-quality."
+        },
+        {
+        "name": "classic_bot_cluster",
+        "conditions": {
+            "posts_max": 4,
+            "followers_max": 20,
+            "following_min": 500,
+            "ratio_max": 0.1
+        },
+        "score": 14,
+        "reason": "Low posts, very low followers, high following, and poor ratio strongly indicate automated behavior."
+        },
+        {
+        "name": "extreme_ratio_low_followers",
+        "conditions": {
+            "ratio_max": 0.05,
+            "followers_max": 50
+        },
+        "score": 12,
+        "reason": "Extremely poor follower ratio combined with low followers is highly suspicious."
+        },
+        {
+        "name": "link_growth_pattern",
+        "conditions": {
+            "link_flag_min": 1,
+            "followers_max": 100,
+            "following_min": 500
+        },
+        "score": 12,
+        "reason": "External links combined with low followers and aggressive following suggest automation."
+        },
+        {
+        "name": "bot_bio_ratio",
+        "conditions": {
+            "link_flag_min": 1,
+            "ratio_max": 0.2
+        },
+        "score": 10,
+        "reason": "Suspicious bio links combined with a poor ratio indicate coordinated behavior."
+        },
+        {
+        "name": "moderate_suspicion_cluster",
+        "conditions": {
+            "posts_max": 0,
+            "followers_max": 20,
+            "ratio_max": 0.3
+        },
+        "score": 8,
+        "reason": "Low activity, low followers, and weak ratio create moderate suspicion."
+        },
+        {
+        "name": "missing_identity_cluster",
+        "conditions": {
+            "followers_max": 50,
+            "ratio_max": 0.3,
+            "bio_type": "no_bio"
+        },
+        "score": 8,
+        "reason": "Weak account indicators combined with missing identity signals are suspicious."
+        },
+        {
+        "name": "username_change_cluster",
+        "conditions": {
+            "username_changes_min": 3,
+            "followers_max": 100,
+            "ratio_max": 0.3
+        },
+        "score": 10,
+        "reason": "Frequent username changes combined with weak account structure suggest manipulation."
+        },
+        {
+        "name": "aggressive_follow_pattern",
+        "conditions": {
+            "following_min": 1000,
+            "followers_max": 50
+        },
+        "score": 12,
+        "reason": "Extremely high following with very low followers strongly suggests bot behavior."
+        },
+        {
+        "name": "low_activity_cluster",
+        "conditions": {
+            "posts_max": 0,
+            "followers_max": 20
+        },
+        "score": 8,
+        "reason": "No posts combined with low followers creates moderate suspicion."
+        },
+        {
+        "name": "low_activity_bad_ratio",
+        "conditions": {
+            "posts_max": 0,
+            "ratio_max": 0.3
+        },
+        "score": 8,
+        "reason": "No posts combined with weak follower ratio is suspicious."
+        },
+        {
+        "name": "missing_identity_low_followers",
+        "conditions": {
+            "followers_max": 20,
+            "bio_type": "no_bio"
+        },
+        "score": 6,
+        "reason": "Low followers combined with no bio suggests weak account authenticity."
+        },
+        {
+        "name": "missing_identity_pattern",
+        "conditions": {
+            "bio_type": "no_bio",
+            "ratio_max": 0.3
+        },
+        "score": 6,
+        "reason": "Missing bio combined with weak ratio indicates suspicious account structure."
+        },
+        {
+            "name": "extreme_bot_cluster",
+            "category": "Extreme Bot Pattern",
+            "conditions": {
+                "followers_max": 10,
+                "following_min": 1000,
+                "ratio_min": 50,
+                "link_flag_min": 1
+            },
+            "score": 14,
+            "reason": "Extremely low followers, massive following, extreme ratio, and flagged links strongly indicate obvious bot behavior."
+        },
+        {
+        "name": "extreme_low_trust_account",
+        "conditions": {
+            "followers_max": 10,
+            "posts_max": 4,
+            "ratio_min": 20,
+            "bio_type": "no_bio"
+        },
+        "score": 12,
+        "reason": "Very low followers, low activity, high ratio, and missing bio indicate extremely low account trust."
+        },
+        {
+            "name": "link_spam_extreme_ratio",
+            "category": "Spam/Link Behavior",
+            "conditions": {
+                "link_flag_min": 1,
+                "ratio_min": 50,
+                "following_min": 1000
+            },
+            "score": 12,
+            "reason": "Spam links combined with extreme ratio and high following strongly indicate automation."
+        },
+        {
+            "name": "high_risk_country_empty_bio_low_posts",
+            "category": "Low-Substance Profile",
+            "combo_group": "high_risk_country_low_substance",
+            "conditions": {
+                "account_location": "high_risk",
+                "bio_type": "no_bio",
+                "posts_max": 4
+            },
+            "score": 10,
+            "reason": "A high-risk country, empty bio, and low post count were detected together."
+        },
+        {
+            "name": "high_risk_country_low_followers_high_following",
+            "category": "Network Imbalance",
+            "combo_group": "high_risk_country_low_substance",
+            "conditions": {
+                "account_location": "high_risk",
+                "followers_max": 150,
+                "following_min": 100
+            },
+            "score": 14,
+            "reason": "A high-risk country, low followers, and elevated following were detected together."
+        },
+        {
+            "name": "high_risk_country_no_bio_low_posts_low_followers",
+            "category": "Low-Substance Profile",
+            "conditions": {
+                "account_location": "high_risk",
+                "bio_type": "no_bio",
+                "posts_max": 4,
+                "followers_max": 100
+            },
+            "score": 8,
+            "reason": "A high-risk country, empty bio, low post count, and low followers indicate a low-substance account."
+        },
+        {
+            "name": "high_risk_country_no_bio_low_posts_high_following",
+            "category": "Low-Substance Outreach",
+            "conditions": {
+                "account_location": "high_risk",
+                "bio_type": "no_bio",
+                "posts_max": 4,
+                "following_min": 150
+            },
+            "score": 6,
+            "reason": "A high-risk country, empty bio, low post count, and elevated following indicate suspicious low-substance outreach behavior."
+        },
+        {
+            "name": "high_risk_low_substance_propaganda",
+            "category": "Contextual Comment Signal",
+            "conditions": {
+                "account_location": "high_risk",
+                "propaganda_min": 1,
+                "bio_type": "no_bio",
+                "posts_max": 4
+            },
+            "score": 8,
+            "reason": "A high-risk, low-substance account used a flagged propaganda phrase in a filtered comment."
+        }
+    ]
+}
