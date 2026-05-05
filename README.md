@@ -52,7 +52,7 @@ By encouraging deeper inspection of account activity and engagement patterns, th
 - **Downloadable Output Files**  
   Export results including all comments, filtered comments, profile data, and analysis reports.
 
-  ## Requirements
+## Requirements
 
 To run InstaSentry, ensure the following are installed and available:
 
