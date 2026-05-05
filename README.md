@@ -51,3 +51,12 @@ By encouraging deeper inspection of account activity and engagement patterns, th
 
 - **Downloadable Output Files**  
   Export results including all comments, filtered comments, profile data, and analysis reports.
+
+  ## Requirements
+
+To run InstaSentry, ensure the following are installed and available:
+
+- **Operating System:** Windows 10 or 11  
+- **Google Chrome Browser** (latest version recommended)  
+- **Internet Connection** 
+- **Instagram Account** (login required; a secondary or non-personal account is recommended)
