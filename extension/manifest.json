@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "InstaSentry",
-  "version": "0.9.0",
-  "description": "Analyze Instagram activity and profile data to assess likelihood of automated behavior.",
+  "version": "1.0.2",
+  "description": "Behavioral analysis tool for detecting patterns of automated and coordinated account activity on Instagram.",
 
   "icons": {
     "16": "icons/16x16.png",
