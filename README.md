@@ -26,7 +26,7 @@ InstaSentry was developed to support the analysis of these patterns by identifyi
 
 By encouraging deeper inspection of account activity and engagement patterns, this tool aims to support awareness, critical thinking, and informed analysis of online information environments.
 
-## Features (v1.0.0)
+## Features (v1.0.2)
 
 - **Chrome Side Panel Interface**  
   Lightweight user interface integrated directly into the browser for streamlined interaction.
