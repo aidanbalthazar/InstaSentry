@@ -61,15 +61,142 @@ To run InstaSentry, ensure the following are installed and available:
 - **Internet Connection** 
 - **Instagram Account** (login required; a secondary or non-personal account is recommended)
 
-## Installation
+## Installation Guide
 
-**Installation instructions for InstaSentry are currently being finalized.**
+A full installation walkthrough video is available here:
 
-Because InstaSentry is distributed as a local Windows executable, some systems may require the user to manually allow the application through Windows security prompts before running it. The recommended process is to allow only the InstaSentry application when prompted, while keeping Windows security features enabled.
+[Watch Installation Tutorial](https://www.youtube.com/watch?v=4UPWplob4xQ)
 
-A step-by-step installation guide and video walkthrough will be added in a future update.
+The written setup instructions below are intended for first-time installation and regular usage of InstaSentry.
 
-For now, users should download InstaSentry **only** from the official GitHub Releases page for this repository.
+---
+
+### First-Time Setup
+
+#### Download Project Contents
+
+1. Download the latest release from the GitHub “Releases” page.
+
+2. Extract the ZIP folder to a convenient location such as your Downloads folder.
+
+---
+
+#### Server & Windows Defender Setup
+
+3. In Windows Search, search for:
+
+   `Virus & Threat Protection`
+
+4. Under “Virus & Threat Protection Settings”, select:
+
+   `Manage Settings`
+
+5. Scroll down to the “Exclusions” section and select:
+
+   `Add or remove exclusions`
+
+6. Select:
+
+   `Add an exclusion`
+
+7. Choose:
+
+   `Folder`
+
+8. Select the main InstaSentry project folder containing both:
+   - `server`
+   - `extension`
+
+   folders.
+
+Sometimes:
+- When the executable is launched, a Windows security prompt may appear.
+
+If prompted:
+- Select:
+  - `Allow this time`
+  OR:
+  - `More info` > `Run anyway`
+
+---
+
+#### Extension Installation
+
+9. Open Google Chrome and enter the following into the address bar:
+
+   `chrome://extensions/`
+
+10. Enable `Developer Mode` using the toggle in the top-right corner.
+
+11. Select:
+
+   `Load unpacked`
+
+12. Navigate to:
+
+   `InstaSentry\extension\`
+
+13. Select the entire extension folder.
+
+14. In the top-right corner of Chrome, click the puzzle-piece Extensions icon.
+
+15. Locate the InstaSentry Side-Panel Extension and pin it for easy access.
+
+16. Open the InstaSentry extension.
+
+17. The extension should initially display:
+   - `Server Status: Offline`
+   - Red status indicator
+
+---
+
+#### Run Server & Use Application
+
+18. Navigate to:
+
+   `InstaSentry\server\`
+
+19. Double-click:
+
+   `InstaSentryServer.exe`
+
+20. Once connected, the extension status indicator should change to:
+   - `Server Status: Online`
+   - Green status indicator
+
+21. Follow the extension prompts and use the application as intended.
+
+22. When finished:
+   - Press `Exit` on the results page
+   OR:
+   - Press `Kill` to terminate the local server session during or after analysis
+
+23. The status indicator should return to:
+   - `Session Terminated`
+   - Red status indicator
+
+---
+
+### Quick Startup Guide
+
+After completing the first-time setup, normal usage is as follows:
+
+1. Open the pinned InstaSentry Side-Panel Extension in Chrome
+
+2. Run:
+
+   `InstaSentryServer.exe`
+
+   from:
+
+   `InstaSentry\server\`
+
+3. Wait for the extension to display:
+   - `Server Status: Online`
+
+4. Use the application normally and follow the prompts
+
+5. Press `Kill` or `Exit` when finished
 
 ## Disclaimers
 
